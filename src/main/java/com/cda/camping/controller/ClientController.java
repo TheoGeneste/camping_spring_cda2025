@@ -14,11 +14,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.cda.camping.model.Client;
 import com.cda.camping.service.ClientService;
 
 @Controller
+@RestController
 @RequestMapping("/api/clients")
 public class ClientController {
 
@@ -72,7 +74,7 @@ public class ClientController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> deleteClient(@PathVariable Integer id) {
+    public ResponseEntity<String> deleteClient(@PathVariable("id") Integer id) {
         try {
             HttpHeaders headers = new HttpHeaders();
             headers.set(HttpHeaders.CONTENT_TYPE, "application/json");

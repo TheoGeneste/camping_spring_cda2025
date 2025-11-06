@@ -1,0 +1,1250 @@
+{
+	"info": {
+		"_postman_id": "57a4be55-4429-4915-96b7-821183efcd28",
+		"name": "Camping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20830465"
+	},
+	"item": [
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "GET_CLIENTS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/clients",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_CLIENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/clients/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_CLIENT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nom\" : \"BIALASIK\",\r\n    \"prenom\" : \"Theo\",\r\n    \"adresse\" : \"Lille\",\r\n    \"telephone\" : \"0666666666\",\r\n    \"idUser\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/clients",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_CLIENT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"nom\" : \"BIALASIKK\",\r\n    \"prenom\" : \"Theo\",\r\n    \"adresse\" : \"Lille\",\r\n    \"telephone\" : \"0666666666\",\r\n    \"idUser\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/clients",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_CLIENT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/clients/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Echeances",
+			"item": [
+				{
+					"name": "GET_ECHEANCES",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/echeances",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"echeances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_ECHEANCE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/echeances/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"echeances",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_ECHEANCE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dateEcheance\" : \"2025-11-06\",\r\n    \"montant\" : 500.5,\r\n    \"payer\" : false,\r\n    \"idFacture\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/echeances",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"echeances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_ECHEANCE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"dateEcheance\" : \"2025-11-06\",\r\n    \"montant\" : 1500.5,\r\n    \"payer\" : false,\r\n    \"idFacture\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/echeances",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"echeances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_ECHEANCE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/echeances/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"echeances",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facture",
+			"item": [
+				{
+					"name": "GET_FACTURES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/factures",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"factures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_FACTURE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/factures/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"factures",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_FACTURE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dateFacture\" : \"2025-11-06\",\r\n    \"prixTtc\" : 2001,\r\n    \"prixHt\" : 1750,\r\n    \"facture\" : false,\r\n    \"idResa\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/factures",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"factures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_FACTURE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"dateFacture\" : \"2025-11-07\",\r\n    \"prixTtc\" : 2001,\r\n    \"prixHt\" : 1750,\r\n    \"facture\" : false,\r\n    \"idResa\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/factures",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"factures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_FACTURE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/factures/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"factures",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facture Service",
+			"item": [
+				{
+					"name": "GET_FACTURES_SERVICES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/factures_services",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"factures_services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_FACTURE_SERVICE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/factures_services/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"factures_services",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_FACTURE_SERVICE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dateFacture\" : \"2025-11-06\",\r\n    \"prixTtc\" : 500,\r\n    \"prixHt\" : 380,\r\n    \"facture\" : false,\r\n    \"idServices\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/factures_services",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"factures_services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_FACTURE_SERVICE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"dateFacture\" : \"2025-11-10\",\r\n    \"prixTtc\" : 500,\r\n    \"prixHt\" : 380,\r\n    \"facture\" : false,\r\n    \"idServices\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/factures_services",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"factures_services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_FACTURE_SERVICE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/factures_services/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"factures_services",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Herbergement",
+			"item": [
+				{
+					"name": "GET_HEBERGEMENTS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/hebergements",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"hebergements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_HEBERGEMENT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/hebergements/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"hebergements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_HEBERGEMENT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emplacement\" : \"Lille\",\r\n    \"etat\" : \"neuf\",\r\n    \"idType\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/hebergements",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"hebergements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_HEBERGEMENT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"emplacement\" : \"Lille\",\r\n    \"etat\" : \"Neuf\",\r\n    \"idType\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/hebergements",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"hebergements"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_HEBERGEMENT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/hebergements/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"hebergements",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Participe",
+			"item": [
+				{
+					"name": "GET_PARTICIPES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/participe",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"participe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_PARTICIPE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/participe/1/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"participe",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_PARTICIPE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idClient\": 1,\r\n    \"idServices\": 1,\r\n    \"dateDebut\": \"2025-11-06\",\r\n    \"dateFin\": \"2025-11-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/participe",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"participe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_PARTICIPE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idClient\": 1,\r\n    \"idServices\": 1,\r\n    \"dateDebut\": \"2025-11-06\",\r\n    \"dateFin\": \"2025-11-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/participe",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"participe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_PARTICIPE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/participe/1/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"participe",
+								"1",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservation",
+			"item": [
+				{
+					"name": "GET_RESERVATIONS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/reservations",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_RESERVATION",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/reservations/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"reservations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_RESERVATION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dateDebut\" : \"2025-11-06\",\r\n    \"dateFin\" : \"2025-11-15\",\r\n    \"idHebergement\" : 1,\r\n    \"idClient\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/reservations",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_RESERVATION",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"dateDebut\" : \"2025-11-06\",\r\n    \"dateFin\" : \"2025-11-20\",\r\n    \"idHebergement\" : 1,\r\n    \"idClient\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/reservations",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_RESERVATION",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/reservations/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"reservations",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"item": [
+				{
+					"name": "GET_SERVICES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/services",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_SERVICE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/services/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"services",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_SERVICE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"label\" : \"Pétanque\",\r\n    \"prix\": 10.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/services",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_SERVICE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"label\" : \"Pétanque\",\r\n    \"prix\": 15.5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/services",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_SERVICE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/services/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"services",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Type",
+			"item": [
+				{
+					"name": "GET_TYPES",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/types",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_TYPE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/types/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"types",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_TYPE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"label\" : \"SPORTS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/types",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_TYPE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 1,\r\n    \"label\" : \"SPORT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/types",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"types"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_TYPE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{URL}}/api/types/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"types",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "GET_USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_USER",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE_USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\" : \"tbialasik\",\r\n    \"password\" : \"password\",\r\n    \"roles\" : \"[USER]\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_USER",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 5,\r\n    \"login\" : \"tbialasik\",\r\n    \"password\" : \"passwords\",\r\n    \"roles\" : \"[USER]\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_USER Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/users/5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": ""
+		},
+		{
+			"value": ""
+		}
+	]
+}

@@ -8,13 +8,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.cda.camping")
-public class AppConfig {
+@ComponentScan(basePackages = {"com.cda.camping", "org.springdoc"})
+public class AppConfig implements WebMvcConfigurer{
     
     @Bean
     public DataSource dataSource(){
@@ -35,4 +36,6 @@ public class AppConfig {
     public ObjectMapper objectMapper(){
         return new ObjectMapper();
     }
+
+    
 }
