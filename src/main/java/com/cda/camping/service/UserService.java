@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.cda.camping.config.PasswordUtil;
 import com.cda.camping.model.User;
 import com.cda.camping.repository.UserRepository;
 
@@ -23,6 +24,7 @@ public class UserService {
 	}
 
 	public void createUser(User u){
+		u.setPassword(PasswordUtil.encode(u.getPassword()));
 		userRepository.save(u);
 	}
 
