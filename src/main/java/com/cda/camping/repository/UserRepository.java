@@ -61,4 +61,19 @@ public class UserRepository {
 		String sql = "DELETE FROM users WHERE id_user = ?";
 		return jdbcTemplate.update(sql, id);
 	}
+
+	public User findByLogin(String login) {
+		String sql = "SELECT id_user,login,password,roles FROM users WHERE login = ?";
+		return jdbcTemplate.query(sql, (ResultSet resultSet) -> {
+			if (resultSet.next()) {
+				User u = new User();
+				u.setId(resultSet.getInt("id_user"));
+				u.setLogin(resultSet.getString("login"));
+				u.setPassword(resultSet.getString("password"));
+				u.setRoles(resultSet.getString("roles"));
+				return u;
+			}
+			return null;
+		}, login);
+	}
 }
